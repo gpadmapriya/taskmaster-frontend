@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -31,3 +34,20 @@
     transform: rotate(360deg);
   }
 }
+nav {
+  height: 3 em;
+  background-color: rgb(204, 235, 204);
+  width: 100%;
+  text-align: center;
+  padding-top: 1 em;
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+ul > li {
+  list-style: none;
+  color: purple;
+}
+
