@@ -13,30 +13,32 @@ function App() {
       .then( fetchedTasks => setTasks(fetchedTasks) );
   }
 
-  function _deleteTask(id) {
-    fetch()
-     .method()
-     .then()
-  }
-
   useEffect( _getTasks, [] );
 
   return (
     <div className="app">
+      <nav>
+        <h3>Task Master</h3>
+      </nav>
+      <main>
       <ul>
         {tasks.map( (task,idx) => {
           return (
             <li key={task.id}>
               <details>
                 <summary>
-                  <span onClick={_deleteTask}>{task.title}</span>
+                  <span>Task Title: {task.title}</span>
+                  <div> Description: {task.description} Assignee: {task.assignee}</div>
                 </summary>
+
                 <History history={task.history} />
+
               </details>
             </li>
           )
         })}
       </ul>
+      </main>
     </div>
   );
 }
@@ -47,8 +49,7 @@ function History(props) {
       {props.history.map( (record,idx) => {
         return (
           <li key={idx}>
-            <span>{record.timestamp}</span>
-            <span>{record.action}</span>
+            <span>Task status: {record.action} on {record.date}</span>
           </li>
         )
       })}
