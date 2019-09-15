@@ -5,6 +5,9 @@
 - A user should be able to visit the home page of the app and see a list of all tasks available in the database
 - User should be able to find the homepage on internet deployed as a static site using s3
 - Some styling
+- Users should be able to upload images that are associated with tasks
+- Server should programmatically upload this image and store this in S3
+- Fetching a single task (GET /tasks/{id}) should incldue the image URL
 
 [Deployed Application](http://taskmaster-frontend-env.s3-website-us-west-2.amazonaws.com/)
 
